@@ -44,7 +44,7 @@ class SimpleDeltaBuilder(nn.Module):
         emb = embed_weight[idx]
         soft_emb = (probs.unsqueeze(-1) * emb).sum(dim=1)
         soft_emb = soft_emb.to(embed_weight.dtype)
-        return self.proj(soft_emb)
+        return soft_emb
 
 
 def compute_entropy_from_logits(logits: torch.Tensor) -> torch.Tensor:
