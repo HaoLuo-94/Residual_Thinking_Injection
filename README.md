@@ -40,11 +40,6 @@ $$
 \mathbf{s}_t = \sum_{i \in \mathcal{K}_t} p_{t,i}\mathbf{e}_i.
 $$
 
-进一步通过线性投影得到 residual 向量：
-
-$$
-\mathbf{\delta}_t = W\mathbf{s}_t, \qquad W \in \mathbb{R}^{H \times H}.
-$$
 
 该设计对应 `SimpleDeltaBuilder` 的实现。与直接使用 argmax token embedding 或手工定义 steering direction 不同，这里的 `\mathbf{\delta}_t` 来自当前高概率候选集合的加权语义重心，因而能够更稳定地反映当前解码分布所蕴含的局部语义趋势。
 
