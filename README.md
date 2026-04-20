@@ -25,7 +25,7 @@ $$
 在第 `t` 步，给定 logits `\mathbf{z}_t`，首先选取 top-k 候选集合：
 
 $$
-\mathcal{K}_t = \operatorname{TopK}(\mathbf{z}_t, k).
+\mathcal{K}_t = \text{TopK}(\mathbf{z}_t, k).
 $$
 
 随后在该集合上重新归一化，得到局部概率分布：
