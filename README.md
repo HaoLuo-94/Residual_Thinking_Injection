@@ -8,7 +8,7 @@ $$
 \Delta = \mathbf{e}*{soft} - \mathbf{e}*{hard}
 $$
 
-where $\mathbf{e}*{soft}$ is the Top-K soft embedding from logits, and $\mathbf{e}*{hard}$ is the embedding of the emitted token.
+where $\mathbf{e}{\mathrm{soft}}$ is the Top-K soft embedding from logits, and $\mathbf{e}{\mathrm{hard}}$ is the embedding of the emitted token.
 
 RTI keeps the generated token sequence unchanged. It only injects $\alpha\Delta$ into the layer-0 residual stream before the MLP.
 
